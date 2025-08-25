@@ -22,6 +22,10 @@ def fibonacci(n):
 def fibonacci2(n):
     return 0 if n == 0 else 1 if n == 1 else fibonacci(n - 1) + fibonacci(n - 2)
 
+#multiplicacion a * b
+def mult2(a, b):
+    return a * b
+
 #multiplicacion de 2 numero Programcion Funcional
 def multi(n1=0, n2=0):
     return n1 * n2
@@ -39,6 +43,10 @@ resultado2= operacion(multiplicacion, 30,4)
 #elevacion de numero a una potencia
 def potencia(n,p):
     return n ** p
+
+# potencia termaria
+def potencia2(n, p):
+    return 1 if p == 0 else n * potencia(n, p - 1)
 
 #Conteo de digitos
 def contar_digitos_iterativo(numero):
@@ -64,6 +72,8 @@ print(fibonacci(10))
 print(fibonacci2(10))
 print(resultado)
 print(resultado2) #con lambda
+print(mult2(2,6))
 print(potencia(4, 4))
+print(potencia2(5,8))
 print(contar_digitos_iterativo(12345))
 print(contar_digitos_funcional_completo(145))
