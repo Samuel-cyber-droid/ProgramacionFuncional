@@ -1,3 +1,5 @@
+from functools import reduce
+
 # Numero Factorial
 def factorial(n):
     if n == 0:
@@ -8,6 +10,15 @@ def factorial(n):
 # Numero Factorial Programacion Funcional
 def factorial2(n):
     return 1 if n == 0 else n * factorial(n - 1)
+
+# Numero factorial con Functools
+def factorial3(n) -> int:
+    if n < 0:
+        raise ValueError("No se aceptan numeros negativos")
+    elif n == 0:
+        return 1
+    else:
+        return reduce(lambda x,y : x * y, range(1, n + 1))
 
 # Serie de Fibonacci
 def fibonacci(n):
@@ -64,16 +75,26 @@ def contar_digitos_iterativo(numero):
 def contar_digitos_funcional_completo(numero):
     return len(list(filter(str.isdigit, str(abs(numero)))))
 
+# Suma de lista [7, 9, 12, 21]
+
+# Suma de tupla (7, 9, 12, 21)
 
 # Ejecuciones
 print(factorial(5))
 print(factorial2(6))
+print(factorial3(7))
+
 print(fibonacci(10))
 print(fibonacci2(10))
+
 print(resultado)
 print(resultado2) #con lambda
+
 print(mult2(2,6))
+
 print(potencia(4, 4))
 print(potencia2(5,8))
+
 print(contar_digitos_iterativo(12345))
 print(contar_digitos_funcional_completo(145))
+
