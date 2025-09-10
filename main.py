@@ -119,6 +119,19 @@ def fibonacci_funcional(n):
 
     return fib_recursivo(n)
 
+# TERNARIO
+'''
+Esta funcion usa los operadores ternarios
+'''
+def fibonacci_funcional_ternario(n):
+
+    if n < 0:
+        raise ValueError("El número de término no puede ser negativo.")
+
+    return 0 if n == 0 else 1 if n == 1 else fibonacci_funcional_ternario(n - 1) + fibonacci_funcional_ternario(n - 2)
+
+# Ejemplo de uso
+print(fibonacci_funcional_ternario(10))
 
 # ---
 
@@ -130,7 +143,6 @@ Esta es una función simple que multiplica dos números. Es la forma más básic
 y directa de realizar esta operación.
 '''
 
-
 def multiplicacion_normal(a, b):
     return a * b
 
@@ -141,7 +153,6 @@ Esta función realiza la multiplicación de forma recursiva, sin usar el operado
 Se basa en el principio de que a * b es igual a 'a' sumado 'b' veces.
 El caso base es cuando b es 0, donde el resultado es 0.
 '''
-
 
 def multiplicacion_recursiva(a, b):
     if b == 0:
@@ -177,6 +188,13 @@ multiplicacion_lambda = lambda n1, n2: n1 * n2
 operacion_lambda = lambda op, n1, n2: op(n1, n2)
 
 # ---
+
+# TERNARIO
+'''
+Este código es muy simple para ser con operador ternario, sin 
+embargo este es su forma más reducida
+'''
+def multiplicacion_ternaria(a, b): return a * b
 
 ### 4. Elevación a una Potencia
 
@@ -328,11 +346,13 @@ print(f"Factorial funcional de 7: {factorial_funcional(7)}")  # Resultado: 5040
 # Fibonacci
 print(f"Fibonacci recursivo de 10: {fibonacci_recursivo(10)}")  # Resultado: 55
 print(f"Fibonacci funcional de 10: {fibonacci_funcional(10)}")  # Resultado: 55
+print(f"Fibonacci Ternario de 10:{fibonacci_funcional_ternario(10)}")
 
 # Multiplicación
 print(f"Multiplicación con función de orden superior: {operacion_funcional(multi, 4, 5)}")  # Resultado: 20
 print(f"Multiplicación con lambda: {operacion_lambda(multiplicacion_lambda, 30, 4)}")  # Resultado: 120
 print(f"Multiplicación normal de 2 y 6: {multiplicacion_normal(2, 6)}")  # Resultado: 12
+print(f"Multiplicacion Ternaria:{multiplicacion_ternaria(2,6)}")
 
 # Potencia
 print(f"Potencia recursiva de 4 elevado a 4: {potencia_recursiva(4, 4)}")  # Resultado: 256
