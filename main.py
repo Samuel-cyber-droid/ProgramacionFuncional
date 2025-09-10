@@ -342,25 +342,30 @@ def suma_funcional(iterable):
 print(f"Factorial normal de 5: {factorial_normal(5)}")  # Resultado: 120
 print(f"Factorial recursivo de 6: {factorial_recursivo(6)}")  # Resultado: 720
 print(f"Factorial funcional de 7: {factorial_funcional(7)}")  # Resultado: 5040
+print("---------------------------------------------------------------------------------------------------------------")
 
 # Fibonacci
 print(f"Fibonacci recursivo de 10: {fibonacci_recursivo(10)}")  # Resultado: 55
 print(f"Fibonacci funcional de 10: {fibonacci_funcional(10)}")  # Resultado: 55
 print(f"Fibonacci Ternario de 10:{fibonacci_funcional_ternario(10)}")
+print("---------------------------------------------------------------------------------------------------------------")
 
 # Multiplicación
 print(f"Multiplicación con función de orden superior: {operacion_funcional(multi, 4, 5)}")  # Resultado: 20
 print(f"Multiplicación con lambda: {operacion_lambda(multiplicacion_lambda, 30, 4)}")  # Resultado: 120
 print(f"Multiplicación normal de 2 y 6: {multiplicacion_normal(2, 6)}")  # Resultado: 12
 print(f"Multiplicacion Ternaria:{multiplicacion_ternaria(2,6)}")
+print("---------------------------------------------------------------------------------------------------------------")
 
 # Potencia
 print(f"Potencia recursiva de 4 elevado a 4: {potencia_recursiva(4, 4)}")  # Resultado: 256
 print(f"Potencia recursiva de 5 elevado a 8: {potencia_recursiva(5, 8)}")  # Resultado: 390625
+print("---------------------------------------------------------------------------------------------------------------")
 
 # Conteo de dígitos
 print(f"Conteo de dígitos normal de 12345: {contar_digitos_normal(12345)}")  # Resultado: 5
 print(f"Conteo de dígitos funcional de 145: {contar_digitos_funcional(145)}")  # Resultado: 3
+print("---------------------------------------------------------------------------------------------------------------")
 
 # Suma de listas y tuplas
 print(f"Suma normal de lista: {suma_normal([7, 9, 12, 21])}")  # Resultado: 49
